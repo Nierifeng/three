@@ -23,7 +23,7 @@
   </template>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="SubItem">
 import { MenuOptions } from '../../../store/models';
 
 

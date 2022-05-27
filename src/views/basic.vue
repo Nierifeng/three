@@ -5,7 +5,7 @@
 <script setup lang="ts" name="basic">
 
 import * as THREE from 'three';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import Stat from 'three/examples/jsm/libs/stats.module'
 
 const w = window.innerHeight - 205;
@@ -69,15 +69,20 @@ onMounted(() => {
 // 解决不同刷新率的问题
 
 const clock = new THREE.Clock();
+let frame = 0;
 function tick() {
   const time = clock.getElapsedTime();
   cube.position.x = Math.sin(time * 2) * 2;
   cube.position.y = Math.cos(time * 2) * 2;
   renderer.render(scene, camera);
   state.update();
-  requestAnimationFrame(tick);
+  frame = requestAnimationFrame(tick);
 }
 tick();
+
+onUnmounted(() => {
+  cancelAnimationFrame(frame);
+})
 
 </script>
 
