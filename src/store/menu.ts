@@ -6,7 +6,7 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
   state: (): MenuStoreState => ({
     menuList: [{
       // icon: 'home-filled',
-      title: '首页',
+      title: '基础的旋转',
       path: '/basis/index'
     }]
   }),

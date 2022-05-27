@@ -3,6 +3,7 @@ import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './routers/router';
+import "element-plus/dist/index.css";
 
 createApp(App)
   .use(ElementPlus)

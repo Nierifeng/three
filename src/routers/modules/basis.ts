@@ -1,7 +1,6 @@
 import { RouteRecordRaw } from "vue-router";
 import { Layout } from "../constant";
 
-// 首页模块
 const homeRouter: Array<RouteRecordRaw> = [
   {
     path: "/basis",
