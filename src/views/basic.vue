@@ -6,12 +6,10 @@
 
 import * as THREE from 'three';
 import { onMounted, onUnmounted } from 'vue';
-import Stat from 'three/examples/jsm/libs/stats.module'
+import Stat from 'three/examples/jsm/libs/stats.module';
 
 const w = window.innerHeight - 205;
 const h = window.innerHeight - 60;
-console.log(w);
-console.log(h);
 
 const state = Stat();
 
@@ -40,7 +38,7 @@ scene.add(ligth);
 // 相机（视角位置） - 
 // 75代表角度范围（广角）
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 100)
-camera.position.set(0, 1, 9);
+camera.position.set(0, 0, 9);
 camera.lookAt(0, 0, 0);
 
 // Randerer（渲染器）
@@ -49,7 +47,9 @@ renderer.setSize(w, h);
 onMounted(() => {
   const box = document.getElementById('box');
   box?.append(renderer.domElement);
-  box?.append(state.dom);
+  const stateDom = state.dom;
+  stateDom.style.left = '205px';
+  box?.append(stateDom);
 })
 
 // setInterval

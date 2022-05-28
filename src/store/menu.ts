@@ -8,6 +8,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
       // icon: 'home-filled',
       title: '基础的旋转',
       path: '/basis/index'
+    }, {
+      title: '鼠标操作移动视角',
+      path: '/basis/mouse',
     }]
   }),
   actions: {
