@@ -17,6 +17,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "基础",
           key: "basis"
         }
+      }, {
+        path: 'mouse',
+        name: "mouse",
+        component: () => import('../../views/mouse.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "鼠标滚轮事件",
+          key: "mouse"
+        }
       }
     ]
   }
