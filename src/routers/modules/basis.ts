@@ -27,6 +27,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "鼠标滚轮事件",
           key: "mouse"
         }
+      }, {
+        path: 'group',
+        name: "group",
+        component: () => import('../../views/group.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "物体的组合运动 group",
+          key: "group"
+        }
       }
     ]
   }
