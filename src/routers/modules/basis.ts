@@ -37,6 +37,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "物体的组合运动 group",
           key: "group"
         }
+      }, {
+        path: 'movingCart',
+        name: "movingCart",
+        component: () => import('../../views/movingCart.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "运动的车子",
+          key: "movingCart"
+        }
       }
     ]
   }
