@@ -13,6 +13,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '物体的组合运动 group',
       path: '/basis/group'
+    }, {
+      title: '运动的车子',
+      path: '/basis/movingCart'
     }]
   }),
   actions: {
