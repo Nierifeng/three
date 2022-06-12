@@ -8,19 +8,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "element-plus": "^2.2.2",
-    "less": "^4.1.2",
+    "element-plus": "^2.2.5",
+    "less": "^4.1.3",
     "pinia": "^2.0.14",
-    "three": "^0.140.2",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.15"
+    "three": "^0.141.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
-    "@types/three": "^0.140.0",
+    "@types/three": "^0.141.0",
     "@vitejs/plugin-vue": "^2.3.3",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12",
     "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vue-tsc": "^0.34.7"
+    "vue-tsc": "^0.37.3"
   }
 }
