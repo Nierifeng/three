@@ -7,12 +7,13 @@ import * as THREE from 'three';
 import { onMounted, onUnmounted } from 'vue';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stat from 'three/examples/jsm/libs/stats.module';
-const w = window.innerHeight - 205;
+const w = window.innerWidth  - 205;
 const h = window.innerHeight - 60;
 
 // 场景
 const scene = new THREE.Scene();
 const state = Stat();
+
 
 const cartMainGeometry = new THREE.BoxGeometry(1, 2, 0.5);
 const cartMainMaterial = new THREE.MeshNormalMaterial();

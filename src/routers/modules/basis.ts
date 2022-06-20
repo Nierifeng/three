@@ -47,6 +47,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "运动的车子",
           key: "movingCart"
         }
+      }, {
+        path: 'fullscreen',
+        name: 'fullscreen',
+        component: () => import('../../views/fullscreen.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "双击全屏",
+          key: "fullscreen"
+        }
       }
     ]
   }
