@@ -7,7 +7,7 @@
 import * as THREE from 'three';
 import { onMounted, onUnmounted } from 'vue';
 
-const w = window.innerHeight - 205;
+const w = window.innerWidth - 205;
 const h = window.innerHeight - 60;
 // 场景
 const scene = new THREE.Scene();
@@ -78,7 +78,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
-  // cancelAnimationFrame(frame);
+  cancelAnimationFrame(frame);
 })
 
 </script>

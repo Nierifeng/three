@@ -16,6 +16,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '运动的车子',
       path: '/basis/movingCart'
+    }, {
+      title: '双击全屏与动态渲染大小',
+      path: '/basis/fullscreen'
     }]
   }),
   actions: {

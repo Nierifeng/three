@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import { onMounted, onUnmounted } from 'vue';
 import Stat from 'three/examples/jsm/libs/stats.module';
 
-const w = window.innerHeight - 205;
+const w = window.innerWidth - 205;
 const h = window.innerHeight - 60;
 
 const state = Stat();
