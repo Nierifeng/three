@@ -1,5 +1,5 @@
 <template>
-  <div id="mouse">
+  <div id="fullscreen">
   </div>
 </template>
 
@@ -61,7 +61,7 @@ function fullscreen() {
 }
 
 onMounted(() => {
-  const div = document.getElementById('mouse');
+  const div = document.getElementById('fullscreen');
   dom = div;
   div?.append(renderer.domElement);
 

@@ -19,6 +19,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '双击全屏与动态渲染大小',
       path: '/basis/fullscreen'
+    }, {
+      title: '调试ui',
+      path: '/basis/deBugUi'
     }]
   }),
   actions: {

@@ -57,6 +57,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "双击全屏",
           key: "fullscreen"
         }
+      }, {
+        path: 'deBugUi',
+        name: 'deBugUi',
+        component: () => import('../../views/deBugUi.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "调试ui",
+          key: "deBugUi"
+        }
       }
     ]
   }
