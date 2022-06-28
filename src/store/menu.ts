@@ -22,6 +22,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '调试ui',
       path: '/basis/deBugUi'
+    }, {
+      title: '纹理',
+      path: '/basis/textures'
     }]
   }),
   actions: {
