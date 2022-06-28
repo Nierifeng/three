@@ -67,6 +67,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "调试ui",
           key: "deBugUi"
         }
+      }, {
+        path: 'textures',
+        name: 'textures',
+        component: () => import('../../views/textures.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "纹理",
+          key: "textures"
+        }
       }
     ]
   }
