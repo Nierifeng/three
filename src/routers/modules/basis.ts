@@ -77,6 +77,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "纹理",
           key: "textures"
         }
+      }, {
+        path: 'materials',
+        name: 'materials',
+        component: () => import('../../views/materials.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "材质",
+          key: "materials"
+        }
       }
     ]
   }
