@@ -25,6 +25,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '纹理',
       path: '/basis/textures'
+    }, {
+      title: '材质',
+      path: '/basis/materials'
     }]
   }),
   actions: {
