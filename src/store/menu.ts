@@ -28,6 +28,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '材质',
       path: '/basis/materials'
+    }, {
+      title: '3D Text',
+      path: '/basis/3dText',
     }]
   }),
   actions: {
