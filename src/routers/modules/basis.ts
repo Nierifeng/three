@@ -87,6 +87,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "材质",
           key: "materials"
         }
+      }, {
+        path: '3dText',
+        name: '3dText',
+        component: () => import('../../views/3d_text.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "3D Text",
+          key: "3dText"
+        }
       }
     ]
   }
