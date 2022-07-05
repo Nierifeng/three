@@ -29,12 +29,11 @@ fontLoader.load('/static/fonts/helvetiker_regular.typeface.json', (font) => {
     bevelEnabled: true, // 是否启用凹面变形
     bevelThickness: 0.03, // 凹面厚度
     bevelSize: 0.02, // 凹面大小
-    bevelOffset: 0, // 凹面偏移  
+    bevelOffset: 0, // 凹面偏移
     bevelSegments: 5 // 凹面段数
   });
   geometry.computeBoundingBox();
   geometry.center();
-
 
   const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
   const text = new THREE.Mesh(geometry, material);
@@ -44,9 +43,6 @@ fontLoader.load('/static/fonts/helvetiker_regular.typeface.json', (font) => {
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 100)
 camera.position.set(0, 1, 9);
 camera.lookAt(0, 0, 0);
-
-// 深拷贝函数
-
 
 const renderer = new THREE.WebGL1Renderer();
 renderer.setSize(w, h);
