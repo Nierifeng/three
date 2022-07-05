@@ -97,6 +97,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "3D Text",
           key: "3dText"
         }
+      }, {
+        path: 'light',
+        name: 'Light',
+        component: () => import('../../views/light.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "光照",
+          key: "light"
+        },
       }
     ]
   }
