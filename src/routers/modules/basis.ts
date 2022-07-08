@@ -107,6 +107,16 @@ const homeRouter: Array<RouteRecordRaw> = [
           title: "光照",
           key: "light"
         },
+      }, {
+        path: 'shadow',
+        name: 'Shadow',
+        component: () => import('../../views/shadow.vue'),
+        meta: {
+          keepAlive: true,
+          requiresAuth: true,
+          title: "阴影",
+          key: "shadow"
+        },
       }
     ]
   }
