@@ -34,6 +34,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '灯光',
       path: '/basis/light',
+    }, {
+      title: '阴影',
+      path: '/basis/shadow',
     }]
   }),
   actions: {

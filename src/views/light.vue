@@ -21,7 +21,6 @@ const scene = new THREE.Scene()
 const material = new THREE.MeshStandardMaterial()
 material.roughness = 0.4
 
-
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // 环境光
 scene.add(ambientLight);
 
@@ -54,12 +53,14 @@ gui.add(rectAreaLight, 'height', 0, 10).name('矩形光源高度');
 
 const spotLight = new THREE.SpotLight(0xff0000, 0.5, 3, Math.PI * 0.1, 0.25, 1); // 聚光灯 第三个参数为最大距离 第四个参数为光线的散射角度 单位为弧度 第五个参数为半影衰减百分比 第六个为沿着光照距离的衰减量
 spotLight.position.set(0.5, 0, 1); // 聚光灯的位置
+spotLight.target.position.x = -0.75; // 修改聚光灯目标位置
+scene.add(spotLight.target); // 聚光灯的目标位置
+scene.add(spotLight);
 gui.add(spotLight, 'intensity', 0, 1).name('聚光灯强度');
 gui.add(spotLight, 'distance', 0, 10).name('聚光灯距离');
 gui.add(spotLight, 'angle', 0, Math.PI).name('聚光灯角度');
 gui.add(spotLight, 'penumbra', 0, 1).name('聚光灯的半影衰减百分比');
 gui.add(spotLight, 'decay', 0, 1).name('聚光灯衰减');
-scene.add(spotLight);
 
 // helper
 const hemisphereLightHelper = new THREE.HemisphereLightHelper(hemisphereLight, 0.1); // 半球光的辅助线 第一个参数为半球光对象 第二个参数为线的长度
@@ -68,7 +69,10 @@ scene.add(hemisphereLightHelper);
 const pointLightHelper = new THREE.PointLightHelper(pointLight, 0.1); // 点光源的辅助线 第一个参数为点光源对象 第二个参数为线的长度
 scene.add(pointLightHelper);
 
-const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight, 0.1); // 矩形光源的辅助线 第一个参数为矩形光源对象 第二个参数为线的长度
+const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 0.1); // 平行光的辅助线 第一个参数为平行光对象 第二个参数为线的长度
+scene.add(directionalLightHelper);
+
+const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight); // 矩形光源的辅助线 第一个参数为矩形光源对象 第二个参数为线的颜色
 scene.add(rectAreaLightHelper);
 
 const spotLightHelper = new THREE.SpotLightHelper(spotLight); // 聚光灯的辅助线 第一个参数为聚光灯对象
