@@ -37,6 +37,9 @@ export const MenuStore = defineStore(StoreName.MenuStore, {
     }, {
       title: '阴影',
       path: '/basis/shadow',
+    }, {
+      title: 'GLTF文件',
+      path: '/basis/GLTF',
     }]
   }),
   actions: {

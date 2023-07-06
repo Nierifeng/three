@@ -40,6 +40,8 @@ scene.add(ligth);
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 100)
 camera.position.set(0, 0, 9);
 camera.lookAt(0, 0, 0);
+console.log(camera);
+
 
 // Randerer（渲染器）
 const renderer = new THREE.WebGLRenderer();
