@@ -13,6 +13,8 @@ const w = window.innerWidth;
 const h = window.innerHeight;
 let mixer: THREE.AnimationMixer;
 
+const baseUrl = import.meta.env.BASE_URL;
+
 // 创建场景
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
@@ -24,6 +26,7 @@ camera.position.set(0, 0, 5);
 // 创建渲染器
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(w, h);
+renderer.setClearColor(0xffffff, 0);
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 // 加载FBX文件
@@ -31,12 +34,10 @@ const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath("/jsm/libs/gltf/");
 const loader = new GLTFLoader();
 loader.setDRACOLoader(dracoLoader);
-loader.load("/src/assets/model1.glb", (gltf) => {
-  console.log(gltf);
+loader.load(`${baseUrl}glb/model1.glb`, (gltf) => {
   const model = gltf.scene;
   model.position.set(0, -1.60, 2.15);
   model.rotation.x = Math.PI / 2 / 13.65;
-  // Q: 11.65°是多少
   scene.add(model);
   mixer = new THREE.AnimationMixer(model);
   mixer.clipAction(gltf.animations[0]).play();
@@ -79,9 +80,6 @@ onUnmounted(() => {
   cancelAnimationFrame(frame);
 });
 </script>
-<style>
-@import "../editor/css/main.css";
-</style>
 
 <style scoped>
 </style>

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from "vue-router";
 
 // * 导入所有router
 const metaRouters = import.meta.globEager("./modules/*.ts");
@@ -18,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
   }, ...routerArray];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   strict: false,
   // 切换页面，滚动到最顶部
